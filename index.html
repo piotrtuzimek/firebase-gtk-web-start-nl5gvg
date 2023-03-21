@@ -1,0 +1,81 @@
+<head>
+  <meta charset="utf-8" />
+  <title>Firebase Meetup</title>
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    #myTable {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #myTable td,
+    #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #myTable tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #myTable tr:hover {
+      background-color: #ddd;
+    }
+
+    #myTable th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+      background-color: #04aa6d;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <section id="firebaseui-auth-container"></section>
+
+    <section id="description-container">
+      <button id="startRsvp">Login</button>
+    </section>
+
+    <section id="guestbook-container">
+      <h2>Messages</h2>
+
+      <form id="leave-message">
+        <label>Add new message </label>
+        <input type="text" id="message" />
+        <button type="submit">
+          <i class="material-icons">send</i>
+          <span>SEND</span>
+        </button>
+      </form>
+    </section>
+    <section id="guestbook-container"></section>
+    <section id="tbmessagelist">
+      <table id="myTable">
+        <thead>
+          <tr>
+            <th>MESSAGE</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+</body>
